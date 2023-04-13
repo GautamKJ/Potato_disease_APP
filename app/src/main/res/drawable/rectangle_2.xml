@@ -1,0 +1,51 @@
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="379dp"
+    android:height="670dp"
+    android:viewportWidth="379"
+    android:viewportHeight="670"
+    >
+    <group>
+        <clip-path
+            android:pathData="M102 2H277C332.228 2 377 46.7715 377 102V568C377 623.228 332.228 668 277 668H102C46.7715 668 2 623.228 2 568V102C2 46.7715 46.7715 2 102 2Z"
+            />
+        <group
+            android:translateX="0.635"
+            android:translateY="-0.515"
+            android:pivotX="189.5"
+            android:pivotY="335"
+            android:scaleX="3.171"
+            android:scaleY="4.617"
+            android:rotation="27.609"
+            >
+            <path
+                android:pathData="M2 2V668H377V2"
+                >
+                <aapt:attr name="android:fillColor">
+                    <gradient
+                        android:type="linear"
+                        android:startX="95.75"
+                        android:startY="335"
+                        android:endX="283.25"
+                        android:endY="335"
+                        >
+                        <item
+                            android:color="#FFFFFF"
+                            android:offset="0"
+                            />
+                        <item
+                            android:color="#00FFFFFF"
+                            android:offset="1"
+                            />
+                    </gradient>
+                </aapt:attr>
+            </path>
+        </group>
+    </group>
+    <group>
+        <clip-path
+            android:pathData="M0 0V670H379V0M102 2H277C332.228 2 377 46.7715 377 102V568C377 623.228 332.228 668 277 668H102C46.7715 668 2 623.228 2 568V102C2 46.7715 46.7715 2 102 2Z"
+            />
+    </group>
+</vector>

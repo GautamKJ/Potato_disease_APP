@@ -1,0 +1,52 @@
+<!-- drawable/ellipse_2.xml -->
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="67dp"
+    android:height="67dp"
+    android:viewportWidth="67"
+    android:viewportHeight="67"
+    >
+    <group>
+        <clip-path
+            android:pathData="M65 33.5C65 50.897 50.897 65 33.5 65C16.103 65 2 50.897 2 33.5C2 16.103 16.103 2 33.5 2C50.897 2 65 16.103 65 33.5Z"
+            />
+        <group
+            android:translateX="0.635"
+            android:translateY="-1.612"
+            android:pivotX="33.5"
+            android:pivotY="33.5"
+            android:scaleX="5.39"
+            android:scaleY="4.767"
+            android:rotation="58.581"
+            >
+            <path
+                android:pathData="M2 2V65H65V2"
+                >
+                <aapt:attr name="android:fillColor">
+                    <gradient
+                        android:type="linear"
+                        android:startX="17.75"
+                        android:startY="33.5"
+                        android:endX="49.25"
+                        android:endY="33.5"
+                        >
+                        <item
+                            android:color="#FFFFFF"
+                            android:offset="0"
+                            />
+                        <item
+                            android:color="#00FFFFFF"
+                            android:offset="1"
+                            />
+                    </gradient>
+                </aapt:attr>
+            </path>
+        </group>
+    </group>
+    <group>
+        <clip-path
+            android:pathData="M0 0V67H67V0M65 33.5C65 50.897 50.897 65 33.5 65C16.103 65 2 50.897 2 33.5C2 16.103 16.103 2 33.5 2C50.897 2 65 16.103 65 33.5Z"
+            />
+    </group>
+</vector>
