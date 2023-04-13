@@ -54,14 +54,22 @@ private String Humidity;
 
 
 
-private String api="0fd4f8060cc642a6b2e170814232203";
+private String api="f374c04af4f942cc8a0184808231204";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
+        getSupportActionBar().hide();
+        Intent intent = getIntent();
 
+        Double l=intent.getDoubleExtra("latitude",'0');
+        Double lo=intent.getDoubleExtra("longitude",'0');
+        String lat=intent.getStringExtra("latitude");
+        String longi=intent.getStringExtra("longitude");
+
+        Log.d("latlongi",l+"  "+lo);
 //         RecycleView
         recyclerView=findViewById(R.id.forecast_rv);
 //        recyclerView.setHasFixedSize(true);
@@ -85,7 +93,7 @@ private String api="0fd4f8060cc642a6b2e170814232203";
 
 
 
-        myApi.getCurrentWeather(api, "26.92,75.82", 5, "no", "no", "en").enqueue(new Callback<JsonObject>() {
+        myApi.getCurrentWeather(api, l.toString()+','+lo.toString(), 5, "no", "no", "en").enqueue(new Callback<JsonObject>() {
             @Override
             public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
 
