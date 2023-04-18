@@ -64,10 +64,10 @@ public class fertilizer extends AppCompatActivity {
                     try {
                         String size = plot_size.getText().toString();
 
-                        Double area = Double.valueOf(Float.parseFloat(size));
+                        int area = Integer.parseInt(size);
 
                         if (area >= 0.5) {
-                            area -= 0.5;
+                            area -= 1;
                             plot_size.setText(String.valueOf(area));
                         }
                     }
@@ -84,10 +84,10 @@ public class fertilizer extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     String size = plot_size.getText().toString();
-                    Double area = Double.valueOf(Float.parseFloat(size));
+                    int area = Integer.parseInt(size);
 
-                    if (area >= 0) {
-                        area += 0.5;
+                    if (area >= 0 && area<9999) {
+                        area += 1;
                         plot_size.setText(String.valueOf(area));
                     }
                 }

@@ -164,6 +164,7 @@
         android:layout_marginTop="24dp"
         android:text="Plot Size"
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
@@ -204,7 +205,7 @@
             android:ems="10"
             android:hint="Enter Plot size "
             android:inputType="number"
-            android:maxLength="5"
+            android:maxLength="4"
             android:textAlignment="center"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="103dp"

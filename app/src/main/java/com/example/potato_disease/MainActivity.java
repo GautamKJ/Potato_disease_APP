@@ -14,9 +14,11 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Looper;
+import android.provider.MediaStore;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     FusedLocationProviderClient mFusedLocationClient;
     LinearLayout fertilizer_cal;
     LinearLayout weather_btn;
+    Button camera;
 
     public double lat;
     public double longi;
@@ -46,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         fertilizer_cal=findViewById(R.id.fertilizer_calculator);
         weather_btn=findViewById(R.id.weather_btn);
-
+        camera=findViewById(R.id.camera);
+        getLastLocation();
 //        Fertilizer btn clicked
         fertilizer_cal.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,11 +66,28 @@ public class MainActivity extends AppCompatActivity {
         weather_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // method to get the location
+                if(checkPermissions()){
+                    Intent intent = new Intent(MainActivity.this, Weather.class);
+                    intent.putExtra("latitude", lat);
+                    intent.putExtra("longitude", longi);
+                            startActivity(intent);
+                }
+                else
+                    Toast.makeText(MainActivity.this,"Location permission is not provided",Toast.LENGTH_SHORT);
                 Log.d("check", "inside userLocation");
-                getLastLocation();
+
             }
         });
+
+//        Open camera
+
+            camera.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent open_camera=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                    startActivity(open_camera);
+                }
+            });
 
 
 
@@ -99,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
                             Intent intent = new Intent(MainActivity.this, Weather.class);
                             intent.putExtra("latitude", lat);
                             intent.putExtra("longitude", longi);
-                            startActivity(intent);
+//                            startActivity(intent);
                         }
                     }
                 });
@@ -142,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, Weather.class);
             intent.putExtra("latitude", lat);
             intent.putExtra("longitude", longi);
-            startActivity(intent);
+//            startActivity(intent);
 
 
         }

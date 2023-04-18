@@ -8,9 +8,8 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/circle"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Potato_disease">
         <activity
@@ -20,7 +19,9 @@
             android:theme="@style/Theme.Potato_disease.NoActionBar" />
         <activity
             android:name=".Weather"
-            android:exported="false" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".Userlocation"
             android:exported="false" />

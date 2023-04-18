@@ -71,9 +71,9 @@
             app:layout_constraintTop_toBottomOf="@id/imageView2">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/weather_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/top_banner_background"
@@ -126,7 +126,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/top_banner_background"
@@ -142,9 +142,9 @@
                 <TextView
                     android:id="@+id/textView4"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginBottom="8dp"
-                    android:text="Tips"
+                    android:text="Cultivation Tips"
                     android:textAlignment="center"
                     android:textColor="#6672FF"
                     android:textStyle="bold|italic" />
@@ -194,7 +194,7 @@
             app:srcCompat="@drawable/smartphone" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/camera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
@@ -373,7 +373,7 @@
                     android:id="@+id/textView91"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Setting"
+                    android:text="About"
                     android:textAlignment="center"
                     android:textColor="#2e3d6d"
                     android:textSize="14sp"

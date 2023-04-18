@@ -2,6 +2,7 @@ package com.example.potato_disease;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,6 +16,10 @@ import android.os.Bundle;
 import android.os.Looper;
 import android.provider.Settings;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -26,6 +31,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONObject;
 
@@ -45,14 +51,18 @@ public class Weather extends AppCompatActivity {
 RecyclerView recyclerView;
 ArrayList<Forecast> list=new ArrayList<>();
 RecyclerViewAdapter recyclerViewAdapter;
-private String city_name;
-private String max_temp;
-private String min_temp;
-private String current_temp;
-private String Humidity;
 
 
+TextView location;
+TextView desc;
+TextView curr_temp;
+TextView haze;
+TextView humid;
+ImageView image;
+ImageView wind,humi,loctn;
+ConstraintLayout weather_back;
 
+ProgressBar progressBar;
 
 private String api="f374c04af4f942cc8a0184808231204";
 
@@ -68,19 +78,33 @@ private String api="f374c04af4f942cc8a0184808231204";
         Double lo=intent.getDoubleExtra("longitude",'0');
         String lat=intent.getStringExtra("latitude");
         String longi=intent.getStringExtra("longitude");
+        progressBar=findViewById(R.id.progressbar);
+
+        weather_back=findViewById(R.id.weather_back);
+        humid=findViewById(R.id.humidity);
+        haze=findViewById(R.id.haze);
+        curr_temp=findViewById(R.id.curr_temp);
+//        desc=findViewById(R.id.desc);
+        location=findViewById(R.id.location);
+        image=findViewById(R.id.imageView13);
+        wind=findViewById(R.id.wind);
+        humi=findViewById(R.id.humi);
+        loctn=findViewById(R.id.imageView11);
 
         Log.d("latlongi",l+"  "+lo);
 //         RecycleView
         recyclerView=findViewById(R.id.forecast_rv);
-//        recyclerView.setHasFixedSize(true);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-//        RecyclerView Adapter
-
-//        RecyclerViewAdapter recyclerViewAdapter=new RecyclerViewAdapter(Weather.this,list);
-//        recyclerView.setAdapter(recyclerViewAdapter);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
 
+//        RecyclerView Adapter;
+
+        RecyclerViewAdapter recyclerViewAdapter=new RecyclerViewAdapter(Weather.this,list);
+        recyclerView.setAdapter(recyclerViewAdapter);
+
+//Progress Bar
+        progressBar.setVisibility(View.VISIBLE);
 //        Retrofit
 
         Retrofit retrofit=new Retrofit.Builder()
@@ -99,13 +123,43 @@ private String api="f374c04af4f942cc8a0184808231204";
 
                 JsonObject forecast = response.body();
 //                String temp=forecast.getAsJsonObject("current").get("temp_c").getAsString();
+                String loc=forecast.getAsJsonObject("location").get("name").getAsString();
+                String temp=forecast.getAsJsonObject("current").get("temp_c").getAsString();
                 int isDay=forecast.getAsJsonObject("current").get("is_day").getAsInt();
                 String condition=forecast.getAsJsonObject("current").getAsJsonObject("condition").get("text").getAsString();
                 String icon=forecast.getAsJsonObject("current").getAsJsonObject("condition").get("icon").getAsString();
                 String humidity=forecast.getAsJsonObject("current").get("humidity").getAsString();
+                String windSpeed=forecast.getAsJsonObject("current").get("wind_kph").getAsString();
                 Log.d("response_gautam",condition);
                 Log.d("response_gautam",icon);
                 Log.d("response_gautam",humidity);
+
+                location.setText(loc);
+//                desc.setText(condition);
+                humid.setText(humidity+"%");
+                curr_temp.setText(temp+"°C");
+                haze.setText(windSpeed+"km/h");
+
+                if(isDay==1)
+                image.setImageResource((R.drawable.sun));
+                else{
+                 image.setImageResource((R.drawable.moon));
+                }
+
+                humi.setImageResource((R.drawable.humidity));
+                wind.setImageResource((R.drawable.haze));
+                loctn.setImageResource((R.drawable.loc));
+                
+
+//                weather_back.setBackground("");
+                weather_back.setBackgroundResource(R.color.aqua);
+
+//                Picasso.get()
+//                        .load("https://"+icon)
+//                        .into(image);
+
+
+
 
                 JsonObject fcast=forecast.getAsJsonObject("forecast");
                 JsonArray farrya=fcast.getAsJsonArray("forecastday");
@@ -121,6 +175,7 @@ private String api="f374c04af4f942cc8a0184808231204";
                     String Date=daily.get("date").getAsString();
 
 
+
                     Log.d("response_gautam1",max_temp);
                     Log.d("response_gautam2",min_temp);
                     Log.d("response_gautam3",day_icon);
@@ -132,8 +187,8 @@ private String api="f374c04af4f942cc8a0184808231204";
 
 
                 Log.d("msg_gautam","successful response body"+list.size());
-//                recyclerViewAdapter.notifyDataSetChanged();
-
+                recyclerViewAdapter.notifyDataSetChanged();
+                progressBar.setVisibility(View.GONE);
 
 
             }

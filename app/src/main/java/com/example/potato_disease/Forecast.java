@@ -6,6 +6,7 @@ public class Forecast {
     public String date;
     public String icon;
     public String text;
+
     public String max_temp;
     public String min_temp;
 

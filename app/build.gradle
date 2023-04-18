@@ -46,6 +46,6 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     // ResponseBody is a class in the okhttp3 library that represents the raw response body of an HTTP response. It contains the data stream that is returned from the server after making an HTTP request.
     implementation 'com.squareup.okhttp3:okhttp:4.9.2'
-
+    implementation 'com.squareup.picasso:picasso:2.8'
 
 }
