@@ -13,31 +13,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Potato_disease">
         <activity
+            android:name=".ChatAI"
+            android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity
             android:name=".fertilizer"
             android:exported="false"
             android:label="@string/title_activity_fertilizer"
             android:theme="@style/Theme.Potato_disease.NoActionBar" />
         <activity
             android:name=".Weather"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".Userlocation"
             android:exported="false" />
-        <activity android:name=".FirstPage"
+        <activity
+            android:name=".FirstPage"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>
