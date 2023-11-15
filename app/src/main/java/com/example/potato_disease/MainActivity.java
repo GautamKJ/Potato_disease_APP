@@ -52,7 +52,7 @@ import java.nio.ByteOrder;
 public class MainActivity extends AppCompatActivity {
     FusedLocationProviderClient mFusedLocationClient;
     LinearLayout fertilizer_cal;
-    LinearLayout weather_btn;
+    LinearLayout weather_btn,cultivation;
     LinearLayout chatai;
     Button camera;
     Bitmap bitmap;
@@ -74,12 +74,22 @@ public class MainActivity extends AppCompatActivity {
         camera=findViewById(R.id.camera);
         chatai=findViewById(R.id.chatai);
         photo=findViewById(R.id.imageView10);
+        cultivation=findViewById(R.id.cultivation);
         getLastLocation();
 //        Fertilizer btn clicked
         fertilizer_cal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i=new Intent(MainActivity.this,fertilizer.class);
+                startActivity(i);
+
+            }
+        });
+
+        cultivation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(MainActivity.this,Cultivation.class);
                 startActivity(i);
 
             }
@@ -282,7 +292,7 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        photo.setImageBitmap(bitmap);
+
 
            }
 
@@ -337,8 +347,28 @@ public class MainActivity extends AppCompatActivity {
             String predictedClassLabel = classes[maxPos];
 
 // Display the result
-            Toast.makeText(MainActivity.this, "Predicted class: " + predictedClassLabel+"   "+maxConfidence, Toast.LENGTH_SHORT).show();
+
             // Releases model resources if no longer used.
+
+
+
+
+//            Toast.makeText(MainActivity.this, "Checking "+predictedClassLabel, Toast.LENGTH_SHORT).show();
+            if(maxPos==0) {
+                Intent disease = new Intent(MainActivity.this, Disease.class);
+                startActivity(disease);
+            }
+            else if(maxPos==1) {
+                Intent disease = new Intent(MainActivity.this, LateBlight.class);
+                startActivity(disease);
+            }
+            else if(maxPos==2) {
+                Intent disease = new Intent(MainActivity.this,Healthy.class);
+                startActivity(disease);
+            }
+            else
+                Toast.makeText(MainActivity.this, "Picture cannot be determined. Try Again", Toast.LENGTH_LONG).show();
+
             model.close();
         } catch (IOException e) {
             // TODO Handle the exception

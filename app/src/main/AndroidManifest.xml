@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -14,10 +14,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Potato_disease">
         <activity
+            android:name=".Irrigation"
+            android:exported="false" />
+        <activity
+            android:name=".Monitoring"
+            android:exported="false" />
+        <activity
+            android:name=".PlantSelection"
+            android:exported="false" />
+        <activity
+            android:name=".Cultivation"
+            android:exported="false" />
+        <activity
+            android:name=".Healthy"
+            android:exported="false" />
+        <activity
+            android:name=".LateBlight"
+            android:exported="false" />
+        <activity
             android:name=".ChatAI"
-            android:exported="false">
-
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".fertilizer"
             android:exported="false"
@@ -27,18 +43,19 @@
             android:name=".Weather"
             android:exported="true" />
         <activity
+            android:name=".Disease"
+            android:exported="true" />
+        <activity
             android:name=".Userlocation"
             android:exported="false" />
         <activity
             android:name=".FirstPage"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".MainActivity"
