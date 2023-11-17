@@ -51,8 +51,8 @@ import java.nio.ByteOrder;
 
 public class MainActivity extends AppCompatActivity {
     FusedLocationProviderClient mFusedLocationClient;
-    LinearLayout fertilizer_cal;
-    LinearLayout weather_btn,cultivation;
+    LinearLayout fertilizer_cal,about;
+    LinearLayout weather_btn,cultivation,info;
     LinearLayout chatai;
     Button camera;
     Bitmap bitmap;
@@ -75,6 +75,8 @@ public class MainActivity extends AppCompatActivity {
         chatai=findViewById(R.id.chatai);
         photo=findViewById(R.id.imageView10);
         cultivation=findViewById(R.id.cultivation);
+        info=findViewById(R.id.info);
+        about=findViewById(R.id.about);
         getLastLocation();
 //        Fertilizer btn clicked
         fertilizer_cal.setOnClickListener(new View.OnClickListener() {
@@ -136,6 +138,22 @@ public class MainActivity extends AppCompatActivity {
                 Intent openai=new Intent(MainActivity.this,ChatAI.class);
                 startActivity(openai);
 
+            }
+        });
+
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(MainActivity.this,About.class);
+                startActivity(i);
+            }
+        });
+
+        info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(MainActivity.this,info.class);
+                startActivity(i);
             }
         });
 

@@ -45,18 +45,24 @@
         <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/drawable/curved_edittext.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/drawable/forecast_bg.xml" value="0.18871794871794872" />
         <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/drawable/ic_baseline_send_24.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/drawable/ic_baseline_skip_next_24.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/drawable/image_border.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/drawable/nutrients.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/drawable/rectangle_1.xml" value="0.18871794871794872" />
         <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/drawable/rectangle_2.xml" value="0.18871794871794872" />
         <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/drawable/rounded_corner.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/drawable/top_banner_background.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/drawable/white_background.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/font/poppins_semibold.xml" value="0.20572916666666666" />
+        <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/layout/activity_about.xml" value="0.1" />
         <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/layout/activity_chat_ai.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/layout/activity_cultivation.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/layout/activity_disease.xml" value="0.1" />
         <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/layout/activity_fertilizer.xml" value="0.22" />
         <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/layout/activity_first_page.xml" value="0.1" />
+        <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/layout/activity_get_started.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/layout/activity_healthy.xml" value="0.16145833333333334" />
+        <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/layout/activity_info.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/layout/activity_irrigation.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/layout/activity_late_blight2.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/layout/activity_main.xml" value="0.22" />
@@ -69,6 +75,8 @@
         <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/layout/disease.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/layout/forecast_bg.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/layout/forecast_rv.xml" value="0.1" />
+        <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/layout/image_border.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/layout/slider_screen.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Users/gauta/AndroidStudioProjects/Potato_disease_APP/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
       </map>
