@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
+                changeLanguage();
 
             }
         });
@@ -155,10 +155,10 @@ public class MainActivity extends AppCompatActivity {
         about.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent i=new Intent(MainActivity.this,About.class);
-//                startActivity(i);
+                Intent i=new Intent(MainActivity.this,About.class);
+                startActivity(i);
 
-                changeLanguage();
+
 
 
             }
