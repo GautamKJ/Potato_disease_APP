@@ -9,7 +9,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
@@ -37,6 +39,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.jar.JarInputStream;
 
 import okhttp3.ResponseBody;
@@ -69,6 +72,7 @@ private String api="f374c04af4f942cc8a0184808231204";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        loadLang();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
         getSupportActionBar().hide();
@@ -202,6 +206,17 @@ private String api="f374c04af4f942cc8a0184808231204";
 
 
 
+    }
+
+    private void loadLang() {
+        SharedPreferences preferences=getSharedPreferences("Settings",MODE_PRIVATE);
+        String language=preferences.getString("app_lang","");
+        Locale locale= new Locale(language);
+        Locale.setDefault(locale);
+
+        Configuration configuration =new Configuration();
+        configuration.locale=locale;
+        getBaseContext().getResources().updateConfiguration(configuration,getBaseContext().getResources().getDisplayMetrics());
     }
 
 

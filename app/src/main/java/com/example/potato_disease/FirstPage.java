@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -19,7 +21,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-
+import java.util.Locale;
 
 
 public class FirstPage extends AppCompatActivity {
@@ -54,9 +56,11 @@ public class FirstPage extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        loadLang();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_page);
         getSupportActionBar().hide();
+
         backButton = findViewById(R.id.backButton);
         nextButton = findViewById(R.id.nextButton);
         skipButton = findViewById(R.id.skipButton);
@@ -95,6 +99,18 @@ public class FirstPage extends AppCompatActivity {
         setDotIndicator(0);
         slideViewPager.addOnPageChangeListener(viewPagerListener);
     }
+
+    private void loadLang() {
+        SharedPreferences preferences=getSharedPreferences("Settings",MODE_PRIVATE);
+        String language=preferences.getString("app_lang","");
+        Locale locale= new Locale(language);
+        Locale.setDefault(locale);
+
+        Configuration configuration =new Configuration();
+        configuration.locale=locale;
+        getBaseContext().getResources().updateConfiguration(configuration,getBaseContext().getResources().getDisplayMetrics());
+    }
+
     @RequiresApi(api = Build.VERSION_CODES.M)
     public void setDotIndicator(int position) {
         dots = new TextView[3];

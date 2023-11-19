@@ -1,22 +1,111 @@
 <resources>
     <string name="app_name">CropCure</string>
-    <string name="title_activity_fertilizer">fertilizer</string>
+    <string name="title_activity_fertilizer" translatable="false">fertilizer</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
+    <string name="first_fragment_label" translatable="false">First Fragment</string>
+    <string name="second_fragment_label" translatable="false">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="skip">Skip</string>
+    <string name="back">Back</string>
+    <string name="start_btn">Get Started</string>
+    <string name="lang">Language</string>
+    <string name="icon">Info</string>
+    <string name="about">About us</string>
+<!--    MAIN ACTIVITY   -->
+    <string name="weather_name">Weather</string>
+    <string name="welcome">Welcome</string>
+    <string name="cultivation">Cultivation</string>
+    <string name="heal">HEAL YOUR CROP</string>
+    <string name="take_btn">TAKE A PICTURE</string>
+    <string name="info_btn">Info</string>
+    <string name="about_btn">About US</string>
+    <string name="chat_btn">ChatAI</string>
 
+<!--    CULTIVATION TIPS-->
+
+    <string name="cutivation_tips">Cultivation TIPS</string>
+    <string name="plant_selection">Plant Selection</string>
+    <string name="plant">Planting</string>
+    <string name="monitoring">Monitoring</string>
+    <string name="irrigation">Irrigation</string>
+    <string name="fertilization">Fertilization</string>
+    <string name="weeding">Weeding</string>
+    <string name="harvesting">Harvesting</string>
+    <string name="post_harvesting">Post Harvesting</string>
+
+            <!--INFO-->
+
+    <string name="point1">&#8226; CropCure -app that empowers farmers to effortlessly identify potato plant diseases with just a simple photo taken from their smartphone.</string>
+    <string name="point2">&#8226; Our cutting-edge deep learning algorithm processes the data to provide accurate disease detection results, saving farmers valuable time and resources.</string>
+    <string name="point3">&#8226; CropCure also includes an array of additional features to help farmers make the most of their crops, such as up-to-date weather forecasts, an easy-to-use fertilizer calculator, crop advisories, cultivation tips and much more.</string>
+    <string name="point4">&#8226; The app support multilanguage and provide chatAI.</string>
+
+                <!--CHAT-->
+    <string name="chat">Welcome to Cropcure ChatAI</string>
+    <string name="chat_hint">Ask a question</string>
+    <string name="detailname_1">Result</string>
     <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="title_activity_late_blight">LateBlight</string>
+    <string name="hello_second_fragment" translatable="false">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_late_blight" translatable="false">LateBlight</string>
 
-    <string name="app_name1">Onboarding Practice</string>
-    <string name="screen1">Potato Disease Detector</string>
-    <string name="screen2">Weather Forecast</string>
-    <string name="screen3">AI Chatbot</string>
+    <string name="app_name1" translatable="false">Onboarding Practice</string>
+    <string name="screen1" translatable="false">Potato Disease Detector</string>
+    <string name="screen2" translatable="false">Weather Forecast</string>
+    <string name="screen3" translatable="false">AI Chatbot</string>
     <string name="screen1desc">Identify potato diseases instantly with machine learning for healthier crops and better yields</string>
     <string name="screen2desc">Stay prepared with accurate weather forecasts for the next three days, ensuring plans go smoothly </string>
     <string name="screen3desc">Engage in natural conversations with our intelligent AI Chatbot, ready to assist and provide valuable insights.</string>
     <string name="startDesc">Take a Picture to know the potato leaf disease.</string>
+    <!--activity diusaease-->
+    <string name="description">Dark spots on leaves with circle around them and yellow rings around the spots.</string>
+    <string name="Spots_turn">Spots turn into transparent wounds.</string>
+    <string name="White_fungus">White fungus cover the underside of leaves</string>
+    <string name="earlyblight_1">Early Blight</string>
+    <string name="Solution">Solution</string>
+    <string name="fungal_dis">Fungal diseases thrive in wet conditions, so it is important to keep the leaves dry.</string>
+    <string name="reduce_the">&#8226; Reduce the humidity around the plant by watering."</string>
+    <string name="improve_air">"&#8226; Improve air flow around the plant by leaving sufficient space between each plant."</string>
+    <string name="Late_Blight">Late Blight</string>
+    <string name="Avoid_planting_potatoes">&#8226; Avoid planting potatoes in the same field consecutively.</string>
+    <string name="Ensure_adequate_spacing">&#8226; Ensure adequate spacing between potato plants.</string>
+    <string name="Healthy">Healthy</string>
+    <string name="Dark_green_colored">&#8226; Dark green colored plant.</string>
+    <string name="Well_shaped">&#8226; Well-shaped, good-colored, nutritious grain.</string>
+    <string name="Brightly_colored_flowers">&#8226; Brightly colored flowers.</string>
+    <string name="Firm_leaves.">&#8226; Firm leaves.</string>
+    <string name="Root_system_is">&#8226; Root system is well developed.</string>
+    <string name="Planting_potato_varieties">&#8226; Planting potato varieties that exhibit resistance to late blight.</string>
+    <string name="Planting_infected">"&#8226; Planting infected seed potatoes."</string>
+    <string name="Late_blight_tends_to">&#8226; Late blight tends to occur under cool and moist conditions</string>
+
+    <!--activity Plant selection-->
+    <string name="planting_desc">Healthy Planting Material</string>
+    <string name="plant_point1">&#8226; For planting,remove potato seeds from cold storage.</string>
+    <string name="plant_point2">&#8226; Select healthy,medium or small sized tubers.</string>
+    <string name="plant_point3">&#8226; The ideal tuber size for planting is about 2.5cm in diameter.</string>
+    <string name="plant_point4">&#8226; Smaller size tubers should be rejected for planting as they may carry diseases.</string>
+    <string name="plant_point5">&#8226; Treat tubers with fungicides before letting them sprout.</string>
+    <string name="plant_point6">&#8226; Cut large tubers for planting as the last step.</string>
+
+<!--    Irrigation-->
+    <string name="irrigation_title">Irrigation</string>
+    <string name="irrigation_desc">Irrigation for Potato</string>
+    <string name="irrigation_point1">&#8226; Potato plants have a shallow and sparse root system, so regular and uniform irrigation is essential.</string>
+    <string name="irrigation_point2">&#8226; The first irrigation should be light and done 5-7 days after planting.</string>
+    <string name="irrigation_point3">&#8226; Subsequent irrgations should be done an interval of 7-15 days depending upon climatic conditions and soil type.</string>
+    <string name="irrigation_point4">&#8226; Withhold irrigation 10-15 days prior to digging up the potatoes for harvest.</string>
+
+<!-- Monitoring-->
+    <string name="monitoring_desc">Healthy Planting Material</string>
+    <string name="monitoring_point1">&#8226; For planting,remove potato seeds from cold storage.</string>
+    <string name="monitoring_point2">&#8226; Select healthy,medium or small sized tubers.</string>
+    <string name="monitoring_point3">&#8226; The ideal tuber size for planting is about 2.5cm in diameter.</string>
+    <string name="monitoring_point4">&#8226; Smaller size tubers should be rejected for planting as they may carry diseases.</string>
+    <string name="monitoring_point5">&#8226; Treat tubers with fungicides before letting them sprout.</string>
+    <string name="monitoring_point6">&#8226; Cut large tubers for planting as the last step.</string>
+    <string name="Late_blight_in_potatoes">&#8226; Late blight in potatoes is primarily caused by a pathogenic oomycete (water mold) called Phytophthora infestans.</string>
+    <string name="fungal_diseSE">Fungal diseases thrive in wet conditions, so it is important to keep the leaves dry.</string>
+
+
 </resources>

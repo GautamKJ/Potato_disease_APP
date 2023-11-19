@@ -21,51 +21,66 @@
         android:theme="@style/Theme.Potato_disease">
         <activity
             android:name=".info"
-            android:exported="false" />
+            android:exported="false"
+            android:configChanges="locale|orientation|screenSize"/>
         <activity
             android:name=".About"
-            android:exported="false" />
+            android:exported="false"
+            android:configChanges="locale|orientation|screenSize"/>
         <activity
             android:name=".GetStarted"
-            android:exported="false" />
+            android:exported="false"
+            android:configChanges="locale|orientation|screenSize"/>
         <activity
             android:name=".Irrigation"
-            android:exported="false" />
+            android:exported="false"
+            android:configChanges="locale|orientation|screenSize"/>
         <activity
             android:name=".Monitoring"
-            android:exported="false" />
+            android:exported="false"
+            android:configChanges="locale|orientation|screenSize"/>
         <activity
             android:name=".PlantSelection"
-            android:exported="false" />
+            android:exported="false"
+            android:configChanges="locale|orientation|screenSize"/>
         <activity
             android:name=".Cultivation"
-            android:exported="false" />
+            android:exported="false"
+            android:configChanges="locale|orientation|screenSize"/>
         <activity
             android:name=".Healthy"
-            android:exported="false" />
+            android:exported="false"
+            android:configChanges="locale|orientation|screenSize"/>
         <activity
             android:name=".LateBlight"
-            android:exported="false" />
+            android:exported="false"
+            android:configChanges="locale|orientation|screenSize"/>
         <activity
             android:name=".ChatAI"
-            android:exported="false" />
+            android:exported="false"
+            android:configChanges="locale|orientation|screenSize"/>
         <activity
             android:name=".fertilizer"
             android:exported="false"
             android:label="@string/title_activity_fertilizer"
-            android:theme="@style/Theme.Potato_disease.NoActionBar" />
+            android:theme="@style/Theme.Potato_disease.NoActionBar"
+            android:configChanges="locale|orientation|screenSize"/>
         <activity
             android:name=".Weather"
-            android:exported="true" />
+            android:exported="true"
+            android:configChanges="locale|orientation|screenSize"/>
         <activity
             android:name=".Disease"
-            android:exported="true" />
+            android:exported="true"
+            android:configChanges="locale|orientation|screenSize"/>
         <activity
             android:name=".Userlocation"
-            android:exported="false" />
+            android:exported="false"
+            android:configChanges="locale|orientation|screenSize"/>
         <activity
             android:name=".FirstPage"
-            android:exported="true">
+            android:exported="true"
+            android:configChanges="locale|orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -74,7 +89,8 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:configChanges="locale|orientation|screenSize"/>
     </application>
 
 </manifest>

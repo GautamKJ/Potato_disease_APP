@@ -4,6 +4,7 @@ import androidx.annotation.MainThread;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
@@ -11,12 +12,16 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.location.Location;
 import android.location.LocationManager;
+import android.media.VolumeShaper;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -48,6 +53,7 @@ import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     FusedLocationProviderClient mFusedLocationClient;
@@ -64,9 +70,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        loadLocale();
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
+
         Log.d("msg", "just checking");
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         fertilizer_cal=findViewById(R.id.fertilizer_calculator);
@@ -82,8 +91,11 @@ public class MainActivity extends AppCompatActivity {
         fertilizer_cal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(MainActivity.this,fertilizer.class);
-                startActivity(i);
+//                Intent i=new Intent(MainActivity.this,fertilizer.class);
+//                startActivity(i);
+
+                Intent openai=new Intent(MainActivity.this,ChatAI.class);
+                startActivity(openai);
 
             }
         });
@@ -135,8 +147,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent openai=new Intent(MainActivity.this,ChatAI.class);
-                startActivity(openai);
+
 
             }
         });
@@ -144,9 +155,15 @@ public class MainActivity extends AppCompatActivity {
         about.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(MainActivity.this,About.class);
-                startActivity(i);
+//                Intent i=new Intent(MainActivity.this,About.class);
+//                startActivity(i);
+
+                changeLanguage();
+
+
             }
+
+
         });
 
         info.setOnClickListener(new View.OnClickListener() {
@@ -157,6 +174,59 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+
+
+    }
+
+    private void changeLanguage() {
+        final String language[]={"English","हिंदी"};
+        AlertDialog.Builder mBuilder= new AlertDialog.Builder(this);
+        mBuilder.setTitle("Change Language");
+        mBuilder.setSingleChoiceItems(language, -1, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                    if(i==0)
+                    {
+                        setlocale("en");
+                        recreate();
+                    }
+                    else
+                    {
+                        setlocale("hi");
+                        recreate();
+                    }
+
+
+            }
+        });
+        mBuilder.create();
+        mBuilder.show();
+    }
+
+    public void setlocale(String en) {
+        Locale locale= new Locale(en);
+        Locale.setDefault(locale);
+
+        Configuration configuration =new Configuration();
+        configuration.locale=locale;
+        getBaseContext().getResources().updateConfiguration(configuration,getBaseContext().getResources().getDisplayMetrics());
+
+        SharedPreferences.Editor editor=getSharedPreferences("Settings",MODE_PRIVATE).edit();
+        editor.putString("app_lang",en);
+        editor.apply();
+
+//        Intent intent = getIntent();
+//        finish();
+//        startActivity(intent);
+    }
+    private void loadLocale()
+    {
+        SharedPreferences preferences=getSharedPreferences("Settings",MODE_PRIVATE);
+        String language=preferences.getString("app_lang","");
+       setlocale(language);
 
 
 

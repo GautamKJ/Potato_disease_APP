@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:layout_marginTop="70dp"
-            android:text="Welcome"
+            android:text="@string/welcome"
             android:textColor=" #ffffff"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -91,7 +91,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:text="Weather"
+                    android:text="@string/weather_name"
                     android:textAlignment="center"
                     android:textColor="#6672FF"
                     android:textStyle="bold|italic" />
@@ -111,14 +111,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    app:srcCompat="@drawable/fertilizer" />
+                    app:srcCompat="@drawable/robot" />
 
                 <TextView
                     android:id="@+id/textView8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:text="Fertilizer"
+                    android:text="ChatAI"
                     android:textAlignment="center"
                     android:textColor="#6672FF"
                     android:textStyle="bold|italic" />
@@ -145,7 +145,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="8dp"
-                    android:text="Cultivation Tips"
+                    android:text="@string/cultivation"
                     android:textAlignment="center"
                     android:textColor="#6672FF"
                     android:textStyle="bold|italic" />
@@ -182,7 +182,7 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="HEAL YOUR CROP"
+            android:text="@string/heal"
             android:textColor="#ffffff"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -200,7 +200,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="Take a picture"
+            android:text="@string/take_btn"
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -328,14 +328,14 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/chatgpt" />
+                        app:srcCompat="@drawable/language" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
                     android:id="@+id/textView5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="ChatAI"
+                    android:text="@string/lang"
                     android:textAlignment="center"
                     android:textColor="#2e3d6d"
                     android:textSize="14sp"
